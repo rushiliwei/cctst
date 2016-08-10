@@ -1,4 +1,4 @@
-
+# js'ajax in other webapp call this action
 class JsdyapisController < ApplicationController
   # before_filter :authenticate_user!  #添加这行
   # authorize_resource :class => false
