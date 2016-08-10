@@ -13,6 +13,13 @@ module V5
     end
 
     get "s2" do
+      # byebug
+      header 'Access-Control-Allow-Origin', '*'
+      # header 'Access-Control-Request-Method', %w{GET POST OPTIONS}.join(",")
+      # # header 'Access-Control-Allow-Methods', 'GET'
+      # header 'Access-Control-Allow-Methods', %w{GET POST OPTIONS}.join(",")
+      p 'API_S2================>'
+      # byebug
       { :s2 => "only smart guys can see this ;" }
     end
   end

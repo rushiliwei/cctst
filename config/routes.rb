@@ -26,6 +26,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :jsdyapis do
+    collection do
+    end
+  end
+
   resources :wuleis do
     collection do
       get :wue
