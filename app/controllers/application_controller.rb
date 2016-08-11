@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+
+  # before_filter :authenticate_user!  #添加这行
+  # skip_before_filter :authenticate_user! # tiaoguo yonghu denglu yanzheng
+
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to access_denied_pages_path, :alert => exception.message
   end
