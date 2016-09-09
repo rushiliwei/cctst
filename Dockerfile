@@ -8,7 +8,8 @@ COPY dck.sh /home
 
 RUN chmod 755 /home/dck.sh
 
-WORKDIR /home/mywork/dockerdemo
+# WORKDIR /home/mywork/dockerdemo
+WORKDIR /home/mywork/cctst
 ## The RUN instruction will execute any commands
 ## Adding HelloWorld page into Nginx server
 # RUN echo "Hello World DaoCloud!" > /usr/share/nginx/html/index.html
