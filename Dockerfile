@@ -7,6 +7,8 @@ COPY dck.sh /home
 # ADD dck.sh /home
 
 RUN chmod 755 /home/dck.sh
+RUN pwd
+RUN ls
 RUN cp -r ../cctst /home/mywork/
 
 # WORKDIR /home/mywork/dockerdemo
