@@ -5,11 +5,11 @@ MAINTAINER rpj leo
 
 COPY dck.sh /home
 # ADD dck.sh /home
+COPY . /home/mywork
 
 RUN chmod 755 /home/dck.sh
-RUN pwd
-RUN ls
-RUN cp -r ../cctst /home/mywork/
+# RUN pwd
+# RUN ls
 
 # WORKDIR /home/mywork/dockerdemo
 WORKDIR /home/mywork/cctst
