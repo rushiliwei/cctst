@@ -17,6 +17,8 @@ WORKDIR /home/mywork/cctst
 ## Adding HelloWorld page into Nginx server
 # RUN echo "Hello World DaoCloud!" > /usr/share/nginx/html/index.html
 RUN echo "Hello world!"
+RUN bundle install
+RUN rake db:migrate
 
 # The EXPOSE instruction informs Docker that the container listens on the
 # specified network ports at runtime
