@@ -14,9 +14,7 @@ RUN chmod 755 /home/dck.sh
 # WORKDIR /home/mywork/dockerdemo
 WORKDIR /home/mywork/cctst
 
-RUN /etc/init.d/mysql start
 RUN bundle install
-RUN rake db:migrate
 
 ## The RUN instruction will execute any commands
 ## Adding HelloWorld page into Nginx server
