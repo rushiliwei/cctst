@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531100342) do
+ActiveRecord::Schema.define(version: 20160923043639) do
 
   create_table "oauth_access_grants", force: :cascade do |t|
     t.integer  "resource_owner_id", limit: 4,     null: false
@@ -61,6 +61,11 @@ ActiveRecord::Schema.define(version: 20160531100342) do
     t.text     "perms",      limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "shitu_users", id: false, force: :cascade do |t|
+    t.string "email",    limit: 255, default: "", null: false
+    t.string "username", limit: 255
   end
 
   create_table "users", force: :cascade do |t|
