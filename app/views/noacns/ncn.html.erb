@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NCN</title>
+  <script src="<%= asset_path "application.js" %>"></script>
+</head>
+<body>
+
+Welcome render to NCN!!!
+<button onclick="wto();">RNDT</button>
+
+</body>
+<%# content_for :js do %>
+<script type="text/javascript">
+  $(function(){
+  });
+
+  function wto(){
+ 		// $("#rndiv").html("<%#=j(render 'show_parking_areas', community_store: @community_store) %>");
+ 		$("#rndiv").html("<%=j(render(template: 'noacns/ntn', formats: 'html')) %>"); 		
+  }
+</script>
+<%# end %>
+</html>

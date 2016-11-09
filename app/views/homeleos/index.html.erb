@@ -6,11 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body  id="rndiv">
 
-index
-index
-index
+<div>
+	index
+	index
+	index </br>
+	<button onclick="rnderto();">RNDT</button>
+</div>
 
 </body>
+<%# content_for :js do %>
+<script type="text/javascript">
+  $(function(){
+  });
+
+  function rnderto(){
+ 		// $("#rndiv").html("<%#=j(render 'show_parking_areas', community_store: @community_store) %>");
+ 		$("#rndiv").html("<%=j(render(template: 'noacns/ncn', formats: 'html')) %>"); 		
+  }
+</script>
+<%# end %>
 </html>
